@@ -32,17 +32,17 @@ public class TargetedAd {
      */
 
 
-    DataCollector dc = new DataCollector();
+    DataCollector dc = new DataCollector(); //Step 1 and 2 - we initizlied datacollector and prepped the two files
     dc.setData("socialMediaPosts.txt", "targetWords.txt");
     
-    String targetedUsers = "";
+    String targetedUsers = ""; // step 3 - variable we used to hold the target user names
 
-    for (int p = 0; p < 39; p++)
+    for (int p = 0; p < 39; p++) // step 4 - loop to iterate through posts
     {
       String post = dc.getNextPost();
-      boolean match = false;
+      boolean match = false; //checks with target word in the inner loop 
 
-      for (int w = 0; w < 20; w++)
+      for (int w = 0; w < 20; w++) 
       {
         String target = dc.getNextTargetWord();
         
@@ -54,7 +54,7 @@ public class TargetedAd {
 
       if (match)
       {
-        String name = post.substring(0, post.indexOf(" "));
+        String name = post.substring(0, post.indexOf(" ")); //adding a found match + extracting it
         targetedUsers += name + " ";
       }
     }
@@ -63,3 +63,4 @@ public class TargetedAd {
   }
 
 }
+
