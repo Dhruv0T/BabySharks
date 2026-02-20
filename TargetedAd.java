@@ -37,7 +37,7 @@ public class TargetedAd {
     
     String targetedUsers = ""; // step 3 - variable we used to hold the target user names
 
-    for (int p = 0; p < 39; p++) // step 4 - loop to iterate through posts
+    for (int p = 0; p < 59; p++) // step 4 - loop to iterate through posts
     {
       String post = dc.getNextPost();
       boolean match = false; //checks with target word in the inner loop 
